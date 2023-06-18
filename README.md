@@ -8,8 +8,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/aubreybmina/mission-5.git">
-    <img src="ui/src/assets/images/pbtech-blue.png  CHANGE THIS" alt="Logo" width="80">
+  <a href="https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application.git">
+    <img src="client/src/images/Logo.png" alt="Logo" width="80">
   </a>
 
 <h3 align="center">Mission 5 - Metro Property Management Page Re-design</h3>
@@ -93,7 +93,7 @@ Make sure you have Node.js and MongoDB Compass installed in your computer. To ch
    git clone https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application
    ```
 
-2. Create a .env file at the parent directory of api
+2. Create a .env file at the parent directory of server
 
    ```sh
    MONGO = 'url of your mongodb compass working database'
@@ -101,20 +101,20 @@ Make sure you have Node.js and MongoDB Compass installed in your computer. To ch
    SERVER_PORT = 9000 //this is to make sure that the port is the same as what is set on the Dockerfile
    ```
 
-3. Create a .env file at the parent directory of ui
+3. Create a .env file at the parent directory of client
    ```sh
    PORT = 3000 //this is to make sure that the port is the same as what is set on the Dockerfile
    ```
-4. On your terminal, go to api directory then install the packages inside package.json using the following scripts
+4. On your terminal, go to server directory then install the packages inside package.json using the following scripts
 
    ```sh
-   cd api
+   cd server
    npm install
    ```
 
-5. Add a new terminal, go to ui directory then install the packages inside package.json using the following scripts
+5. Add a new terminal, go to client directory then install the packages inside package.json using the following scripts
    ```sh
-   cd ui
+   cd client
    npm install
    ```
 
@@ -126,17 +126,17 @@ Make sure you have Node.js and MongoDB Compass installed in your computer. To ch
 
 To run the project on your local desktop run the following scripts:
 
-1. On your terminal, go to api directory then start the db connection and the server
+1. On your terminal, go to server directory then start the db connection and the server
 
    ```sh
-   cd api
+   cd server
    yarn dev
    ```
 
-2. Add a new terminal, go to ui directory then run the ui. It will automatically open a browser tab
+2. Add a new terminal, go to ui directory then run the client. It will automatically open a browser tab
 
    ```sh
-   cd ui
+   cd client
    yarn start
    ```
 
@@ -154,25 +154,25 @@ To create a docker image of the project on your local desktop run the following 
    "proxy": "http://api:9000"
    ```
 
-2. Inside the api folder, change the MONGO_URL from "mongodb://127.0.0.1:27017/db-name?" to "mongodb://mongo:27017/db-name?" on the .env file.
+2. Inside the server folder, change the MONGO_URL from "mongodb://127.0.0.1:27017/db-name?" to "mongodb://mongo:27017/db-name?" on the .env file.
 
    ```sh
    MONGO_URL = 'mongodb://mongo:27017/db-name?'
    ```
 
-3. Once everything is changed, go to api directory on your terminal then run the docker script
+3. Once everything is changed, go to server directory on your terminal then run the docker script
 
    ```sh
-   cd api
-   build -t laptop_api
+   cd server
+   docker build -t metro_api .
    ```
 
-4. Go to ui directory then run the docker script
+4. Go to client directory then run the docker script
 
    ```sh
    cd..
-   cd ui
-   build -t pb_frontend
+   cd client
+   docker build -t metro_frontend .
    ```
 
 5. You can finally run the docker script on the terminal of mission-5's parent directory
@@ -203,7 +203,7 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
 
 Oliver Le Lievre - hello@iamollie.com
-CHAO PUT UR DETAILS HERE
+Chao Xin Nhin - chaon@missionreadyhq.com
 
 Project Link: [https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application](https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application)
 
