@@ -54,7 +54,7 @@
 
 ## About The Project
 
-<img src="ui/src/assets/images/laptop-landing-page.png" alt="img" height="400">&nbsp;&nbsp;&nbsp;<img src="ui/src/assets/images/business-laptop-page.png" alt="img2" height="400">&nbsp;&nbsp;&nbsp;<img src="ui/src/assets/images/laptop-page.png" alt="img2" height="400">
+<img src="client/src/images/landing-page.png" alt="img" height="400">&nbsp;&nbsp;&nbsp;<img src="client/src/images/search-page.png" alt="img2" height="400">&nbsp;&nbsp;&nbsp;<img src="client/src/images/property-page.png" alt="img2" height="400">
 
 The Metro Property Management Landing Page Re-design project is part of our requirement for Mission Ready Level 5 Certification. As the developer, our task was to utilize MongoDB Compass as the database, build an API to interact with the database, and develop the user interface (UI) based on the designs provided by our UXD Team. We successfully dockerized the application using Docker Compose, allowing for easy deployment and management. The UI will display the collection of properties from MongoDB, providing a streamlined and user-friendly experience for Metro Property Management.
 
