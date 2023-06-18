@@ -1,0 +1,44 @@
+@use "utils" as u;
+@use "media-queries" as m;
+.homeContact {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  @include m.mobile{
+    width: 100%;
+  }
+  &__Image {
+    @include u.background("../images/RedApartment.png");
+    height: u.toRem(500);
+    width: u.toRem(1200);
+    border-radius: u.toRem(15);
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: u.toRem(200);
+    padding-top: u.toRem(100);
+    gap: u.toRem(30);
+    color: white;
+    text-shadow: u.toRem(1) u.toRem(2) rgba(0, 0, 0, 0.274);
+    @include m.mobile{
+      width: 100%;
+      padding-right: u.toRem(20);
+    }
+  }
+
+  &__touch {
+    font-size: u.toRem(48);
+  }
+
+  &__email {
+    font-size: u.toRem(32);
+  }
+
+  &__phone {
+    font-size: u.toRem(32);
+  }
+}

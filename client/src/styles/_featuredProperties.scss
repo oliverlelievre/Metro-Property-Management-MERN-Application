@@ -1,0 +1,50 @@
+@use "utils" as u;
+@use "media-queries" as m;
+.fp {
+  gap: u.toRem(20);
+  display: flex;
+  justify-content: center;
+  margin-top: u.toRem(15);
+  
+  &__item {
+    gap: u.toRem(10);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    height: u.toRem(173);
+    object-fit: cover;
+    border-radius: u.toRem(8);
+    margin: 0 auto;
+  }
+
+  &__name {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: u.toRem(-5);
+  }
+
+  &__city {
+    font-weight: 300;
+    margin-bottom: u.toRem(-5);
+  }
+
+  &__price {
+    font-weight: 500;
+  }
+
+  &__rating {
+    & > button {
+      background-color: #003580;
+      color: white;
+      border: none;
+      padding: u.toRem(3);
+      margin-right: u.toRem(10);
+      font-weight: bold;
+    }
+    & > span {
+      font-size: u.toRem(14);
+    }
+  }
+}

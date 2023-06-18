@@ -1,0 +1,38 @@
+@use "utils" as u;
+@use "media-queries" as m;
+.featured {
+  gap: u.toRem(20);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: u.toRem(20);
+  @include m.mobile{
+    margin-top: u.toRem(50);
+    margin-left: u.toRem(20);
+    margin-right: u.toRem(20);
+  }
+  &__item {
+    position: relative;
+    color: white;
+    border-radius: u.toRem(10);
+    overflow: hidden;
+    height: u.toRem(250);
+    flex: 1;
+    max-width: u.toRem(350);
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__titles {
+    position: absolute;
+    bottom: u.toRem(20);
+    left: u.toRem(20);
+    @include m.mobile{
+      font-size: u.toRem(9);
+      left: u.toRem(10);
+    }
+  }
+}

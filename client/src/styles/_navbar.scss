@@ -1,0 +1,41 @@
+@use "media-queries" as m;
+@use "utils" as u;
+
+.navbar {
+  height: u.toRem(100);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: u.toRem(28) u.toRem(0);
+  @include m.mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: u.toRem(20);
+  }
+  &__container {
+    width: u.toRem(100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: u.toRem(1200);
+    @include m.mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: u.toRem(20)
+    }
+    &LogoImage {
+      width: u.toRem(300);
+    }
+  }
+}
+.nav {
+  &__Button {
+    border: none;
+    padding: u.toRem(5) u.toRem(10);
+    cursor: pointer;
+    color: black;
+    background-color: white;
+  }
+}

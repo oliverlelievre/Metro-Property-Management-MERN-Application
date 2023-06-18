@@ -1,0 +1,95 @@
+@use "utils" as u;
+@use "media-queries" as m;
+.fb {
+  @include m.mobile{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: u.toRem(50);
+  }
+  &__heading {
+    margin-left: u.toRem(150);
+    font-size: u.toRem(24);
+    font-weight: normal;
+    color: rgb(128, 160, 247);
+    @include m.mobile{
+      margin: 0 auto;
+      margin-bottom: u.toRem(100);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-left: u.toRem(150);
+    margin-right: u.toRem(80);
+    margin-top: u.toRem(80);
+    @include m.mobile{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      gap: u.toRem(100);
+    }
+    &1 {
+      width: u.toRem(350);
+      display: grid;
+      border-radius: u.toRem(15);
+      border: none;
+      box-shadow: u.toRem(1)  u.toRem(20)  u.toRem(20) rgba(0, 0, 0, 0.192);
+    }
+
+    &2 {
+      width: u.toRem(350);
+      display: grid;
+      border-radius: u.toRem(15);
+      border: none;
+      box-shadow: u.toRem(1)  u.toRem(20)  u.toRem(20) rgba(0, 0, 0, 0.192);
+    }
+
+    &3 {
+      width: u.toRem(350);
+      display: grid;
+      border-radius: u.toRem(15);
+      border: none;
+      box-shadow: u.toRem(1)  u.toRem(20)  u.toRem(20) rgba(0, 0, 0, 0.192);
+    }
+  }
+}
+
+.cards {
+  &1Image {
+    width: u.toRem(350);
+    height: u.toRem(220);
+    border-radius: u.toRem(15) u.toRem(15) u.toRem(0) u.toRem(0);
+  }
+
+  &2Image {
+    width: u.toRem(350);
+    height: u.toRem(220);
+    border-radius: u.toRem(15) u.toRem(15) u.toRem(0) u.toRem(0);
+  }
+
+  &3Image {
+    width: u.toRem(350);
+    height: u.toRem(220);
+    border-radius: u.toRem(15) u.toRem(15) u.toRem(0) u.toRem(0);
+  }
+}
+
+.cards {
+  &__heading {
+    margin-top: u.toRem(10);
+    margin-left:  u.toRem(30);
+    margin-right:  u.toRem(30);
+  }
+  &__readMore {
+    margin-top: u.toRem(10);
+    margin-left: u.toRem(30);
+    margin-bottom: u.toRem(10);
+    font-size: u.toRem(16);
+    color: rgb(128, 160, 247);
+  }
+}

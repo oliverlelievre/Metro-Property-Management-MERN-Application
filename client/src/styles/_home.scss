@@ -1,0 +1,20 @@
+@use "utils" as u;
+
+.homeContainer {
+  margin-top: u.toRem(150);
+  display: flex;
+  flex-direction: column;
+  gap: u.toRem(30);
+  &__links {
+    margin-bottom: u.toRem(50);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__About {
+    margin-top: u.toRem(100);
+    padding-bottom: u.toRem(50);
+    background-color: #e2f0fd;
+  }
+}

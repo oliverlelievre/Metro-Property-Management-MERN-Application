@@ -1,0 +1,40 @@
+@use "utils" as u;
+@use "media-queries" as m;
+.header {
+  @include u.background("../images/background.png");
+  position: relative;
+  height: u.toRem(300);
+  display: flex;
+  justify-content: center;
+  @include m.mobile {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+.hero {
+  &__heading {
+    display: flex;
+    justify-content: center;
+    padding-top: u.toRem(95);
+    font-weight: 450;
+    font-size: u.toRem(32);
+    @include m.mobile {
+      margin-left: u.toRem(20);
+      margin-right: u.toRem(20);
+    }
+  }
+  &__subTitle {
+    display: flex;
+    justify-content: center;
+    @include m.mobile {
+      margin-left: u.toRem(20);
+      margin-right: u.toRem(20);
+    }
+  }
+  &__searchBar {
+    display: flex;
+    justify-content: center;
+  }
+}

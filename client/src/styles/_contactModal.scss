@@ -1,0 +1,101 @@
+@use "color" as c;
+@use "utils" as u;
+
+.modal {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.613);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__content {
+    background-color: white;
+    padding-top: u.toRem(70);
+    padding-left: u.toRem(40);
+    padding-bottom: u.toRem(70);
+    border-radius: u.toRem(15);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30vw;
+
+    &Heading {
+      margin-bottom: 1rem;
+    }
+
+    &Name {
+      & > label {
+        font-weight: bolder;
+      }
+      & > input {
+        width: 30rem;
+        height: 2rem;
+        margin-bottom: 1rem;
+        border: 0.1rem solid c.$secondary-color;
+        border-radius: 0.5rem;
+      }
+    }
+
+    &Email {
+      & > label {
+        font-weight: bolder;
+      }
+
+      & > input {
+        width: 30rem;
+        height: 2rem;
+        margin-bottom: 1rem;
+        border: 0.1rem solid c.$secondary-color;
+        border-radius: 0.5rem;
+      }
+    }
+
+    &Phone {
+      & > label {
+        font-weight: bolder;
+      }
+
+      & > input {
+        width: 30rem;
+        height: 2rem;
+        margin-bottom: 1rem;
+        border: 0.1rem solid c.$secondary-color;
+        border-radius: 0.5rem;
+      }
+    }
+
+    &Message {
+      & > label {
+        font-weight: bolder;
+      }
+
+      & > textarea {
+        width: 30rem;
+        height: 5rem;
+        margin-bottom: 1rem;
+        border: 0.1rem solid c.$secondary-color;
+        border-radius: 0.5rem;
+      }
+    }
+
+    button {
+      background-color: white;
+      border: 0.2rem solid c.$primary-color;
+      border-radius: 0.3rem;
+      padding: u.toRem(10) u.toRem(20);
+      transition: 0.2s background-color;
+      &:hover {
+        background-color: c.$button-hover-color;
+        color: white;
+        border: 0.2rem solid c.$standout-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

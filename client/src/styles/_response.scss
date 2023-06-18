@@ -1,0 +1,85 @@
+@use "utils" as u;
+@use "media-queries" as m;
+.response {
+  margin-top: u.toRem(100);
+  padding-top: u.toRem(50);
+  padding-bottom: u.toRem(200);
+  background-color: #e7fdfb;
+  @include m.mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: u.toRem(50);
+    width: 100%;
+  }
+  &__heading {
+    text-align: center;
+    color: rgb(128, 160, 247);
+    font-weight: 450;
+    font-size: u.toRem(24);
+    @include m.mobile {
+      margin: 0 auto;
+      margin-bottom: u.toRem(100);
+      margin-top: u.toRem(50);
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-left: u.toRem(150);
+    margin-right: u.toRem(80);
+    margin-top: u.toRem(80);
+    @include m.mobile {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin: 0 auto;
+      gap: u.toRem(100);
+    }
+    &Profile {
+      display: flex;
+      gap: u.toRem(10);
+      margin-bottom: u.toRem(40);
+    }
+    &1 {
+      border: u.toRem(1) solid black;
+      padding: u.toRem(5) u.toRem(50);
+      padding-bottom: u.toRem(45);
+      padding-top: u.toRem(25);
+      width: u.toRem(250);
+      border-radius: u.toRem(15);
+      border: none;
+      box-shadow: u.toRem(1) u.toRem(20) u.toRem(20) rgba(0, 0, 0, 0.192);
+      background-color: white;
+    }
+
+    &2 {
+      border: u.toRem(1) solid black;
+      padding: u.toRem(5) u.toRem(50);
+      padding-bottom: u.toRem(45);
+      padding-top: u.toRem(25);
+      width: u.toRem(250);
+      border-radius: u.toRem(15);
+      border: none;
+      box-shadow: u.toRem(1) u.toRem(20) u.toRem(20) rgba(0, 0, 0, 0.192);
+      background-color: white;
+    }
+    &3 {
+      border: u.toRem(1) solid black;
+      padding: u.toRem(5) u.toRem(50);
+      padding-bottom: u.toRem(45);
+      padding-top: u.toRem(25);
+      width: u.toRem(250);
+      border-radius: u.toRem(15);
+      border: none;
+      box-shadow: u.toRem(1) u.toRem(20) u.toRem(20) rgba(0, 0, 0, 0.192);
+      background-color: white;
+    }
+    &Images {
+      width: u.toRem(60);
+    }
+  }
+}

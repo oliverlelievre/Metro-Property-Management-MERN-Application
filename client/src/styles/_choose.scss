@@ -1,0 +1,114 @@
+@use "color" as c;
+@use "utils" as u;
+@use "media-queries" as m;
+
+.choose {
+  display: flex;
+  flex-direction: column;
+  @include m.mobile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  };
+  
+  &__heading {
+    margin-bottom: u.toRem(50);
+    margin-left: u.toRem(150);
+    margin-right: u.toRem(100);
+    @include m.mobile{
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      text-align: center;
+      margin-right: u.toRem(20);
+      margin-left: u.toRem(20);
+    };
+    &Text {
+      font-weight: normal;
+      font-size: u.toRem(24);
+      color: c.$button-hover-color;
+    }
+    &Content {
+      display: flex;
+      justify-content: space-between;
+      gap: u.toRem(200);
+      margin-top: u.toRem(30);
+      @include m.mobile{
+        display: flex;
+        flex-direction: column;
+      };
+      &Subtitle {
+        font-size: u.toRem(36);
+        @include m.mobile{
+          margin-bottom: u.toRem(-100);
+        };
+      }
+    }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: u.toRem(80);
+    margin-left: u.toRem(150);
+    margin-right: u.toRem(80);
+    @include m.mobile{
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      margin-top: u.toRem(100);
+      gap: u.toRem(100)
+    };
+    &1 {
+      margin: 0 auto;
+      padding: u.toRem(10) u.toRem(50);
+      padding-bottom: u.toRem(70);
+      width: u.toRem(250);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border-radius: u.toRem(15);
+      border: none;
+      box-shadow: u.toRem(1) u.toRem(20) u.toRem(20) rgba(0, 0, 0, 0.192);
+    }
+
+    &2 {
+      margin: 0 auto;
+      padding: u.toRem(10) u.toRem(50);
+      padding-bottom: u.toRem(70);
+      width: u.toRem(250);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border-radius: u.toRem(15);
+      border: none;
+      box-shadow: u.toRem(1) u.toRem(20) u.toRem(20) rgba(0, 0, 0, 0.192);
+      &Text {
+        padding-bottom: u.toRem(22);
+      }
+    }
+
+    &3 {
+      margin: 0 auto;
+      padding: u.toRem(10) u.toRem(50);
+      padding-bottom: u.toRem(70);
+      width: u.toRem(250);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      border-radius: u.toRem(15);
+      border: none;
+      box-shadow: u.toRem(1) u.toRem(20) u.toRem(20) rgba(0, 0, 0, 0.192);
+    }
+  }
+
+  img {
+    height: u.toRem(100);
+  }
+
+  h4 {
+    margin-top: u.toRem(40);
+    margin-bottom: u.toRem(20);
+  }
+}

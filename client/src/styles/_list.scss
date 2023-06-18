@@ -1,0 +1,115 @@
+@use "color" as c;
+@use "utils" as u;
+
+.list {
+  &__Container {
+    display: flex;
+    justify-content: center;
+    margin-top: u.toRem(20);
+    &Wrapper {
+      width: 100%;
+      display: flex;
+      gap: u.toRem(20);
+      margin-left: u.toRem(20);
+      &Search {
+        padding: u.toRem(10);
+        border-radius: u.toRem(15);
+        position: sticky;
+        top: u.toRem(10);
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        width: u.toRem(400);
+        &Title {
+          font-weight: normal;
+          font-size: u.toRem(24);
+          color: c.$secondary-color;
+          margin-bottom: u.toRem(10);
+        }
+
+        & > button {
+          padding: u.toRem(10);
+          background-color: white;
+          color: c.$secondary-color;
+          border: 1px solid black;
+          border-radius: u.toRem(10);
+          width: 100%;
+          font-weight: 500;
+          cursor: pointer;
+          transition: 0.15s background-color;
+          &:hover {
+            background-color: c.$button-hover-color;
+            color: white;
+            border: none;
+          }
+        }
+
+        &Item {
+          display: flex;
+          flex-direction: column;
+          gap: u.toRem(5);
+          margin-bottom: u.toRem(10);
+          & > label {
+            font-size: u.toRem(24);
+          }
+
+          & > input {
+            height: u.toRem(30);
+            padding: u.toRem(5);
+            border: 1px solid c.$secondary-color;
+            border-radius: u.toRem(10);
+          }
+
+          & > span {
+            height: u.toRem(30);
+            padding: u.toRem(5);
+            background-color: white;
+            border: u.toRem(1) solid c.$secondary-color;
+            border-radius: u.toRem(10);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &__Result {
+    flex: 2;
+    margin-right: u.toRem(20);
+    border-radius: u.toRem(15);
+    padding: u.toRem(20) u.toRem(50);
+    background-color: #f8f9fa;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+  }
+}
+
+.ls {
+  &__Options {
+    padding: u.toRem(10);
+  }
+
+  &__Option {
+    &Item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: u.toRem(10);
+      color: #555;
+      font-size: u.toRem(12);
+      &Input {
+        width: u.toRem(50);
+      }
+    }
+  }
+}
+
+.homeContact {
+  margin-top: u.toRem(90);
+}
+
+.footer {
+  margin-top: u.toRem(90);
+}

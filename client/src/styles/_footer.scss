@@ -1,0 +1,76 @@
+@use "utils" as u;
+@use "media-queries" as m;
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: u.toRem(900);
+  font-size: u.toRem(12);
+  @include m.mobile{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  &__Lists {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: u.toRem(50);
+    @include m.mobile{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: u.toRem(20);
+      margin-left: u.toRem(20);
+      margin-right: u.toRem(20);
+    }
+  }
+
+  &__List {
+    list-style: none;
+    padding: 0;
+    &Heading {
+      color: red;
+    }
+
+    &Item {
+      margin-bottom: u.toRem(10);
+      color: #003580;
+      cursor: pointer;
+    }
+  }
+
+  &__Social {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: u.toRem(50);
+    margin-bottom: u.toRem(20);
+    gap: u.toRem(20);
+  }
+}
+
+.instagram {
+  width: u.toRem(70);
+  border-radius: u.toRem(50);
+  box-shadow: u.toRem(0) u.toRem(4) u.toRem(4) rgba(0, 0, 0, 0.226);
+}
+
+.twitter {
+  padding: 13px;
+  border-radius: 50px;
+  box-shadow: u.toRem(0) u.toRem(4) u.toRem(4) rgba(0, 0, 0, 0.226);
+}
+
+.facebook {
+  padding: 16px;
+  border-radius: 50px;
+  box-shadow: u.toRem(0) u.toRem(4) u.toRem(4) rgba(0, 0, 0, 0.226);
+}
+
+.linkedin {
+  padding: 16px;
+  border-radius: 50px;
+  box-shadow: u.toRem(0) u.toRem(4) u.toRem(4) rgba(0, 0, 0, 0.226);
+}

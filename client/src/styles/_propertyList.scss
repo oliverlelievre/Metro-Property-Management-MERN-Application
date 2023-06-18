@@ -1,0 +1,41 @@
+@use "utils" as u;
+@use "media-queries" as m;
+.pList {
+  gap: u.toRem(20);
+  display: flex;
+  justify-content: center;
+  @include m.mobile{
+    margin-left: u.toRem(20);
+    margin-right: u.toRem(20);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__item {
+    border-radius: u.toRem(10);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  &__img {
+    height: u.toRem(150);
+    object-fit: cover;
+    @include m.mobile{
+      width: u.toRem(300);
+    }
+  }
+
+  &__titles {
+    > h1 {
+      font-size: u.toRem(18);
+      color: #444;
+      text-transform: capitalize;
+      margin-bottom: u.toRem(5);
+    }
+
+    > h2 {
+      font-size: u.toRem(14);
+      font-weight: 300;
+    }
+  }
+}

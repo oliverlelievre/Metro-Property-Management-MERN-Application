@@ -1,0 +1,38 @@
+version: "1"
+services:
+  api:
+    container_name: property_management_service
+    image: property_management_api
+    restart: always
+    build: ./server
+    ports:
+      - "9000:9000"
+    depends_on:
+      - mongo
+    networks:
+      - mynetwork
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+
+    networks:
+      - mynetwork
+  ui:
+    container_name: pm_frontend_service
+    image: pm_frontend
+    restart: always
+    build: ./client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+      - mongo
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:

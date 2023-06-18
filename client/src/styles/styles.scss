@@ -1,0 +1,29 @@
+@use "color" as c;
+@use "media-queries" as m;
+@use "navbar";
+@use "hero";
+@use "featured2";
+@use "featuredProperties";
+@use "propertyList";
+@use "choose";
+@use "about";
+@use "blog";
+@use "response";
+@use "homeContact";
+@use "footer";
+@use "home";
+
+$font-stack: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+  display: flex;
+  justify-content: center;
+  max-width: 1920px;
+  font-family: 100% $font-stack;
+  @include m.mobile {
+    display: flex;
+    justify-content: center;
+    font-family: 100% $font-stack;
+    flex-direction: column;
+  }
+}

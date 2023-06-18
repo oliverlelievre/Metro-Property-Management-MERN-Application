@@ -1,0 +1,119 @@
+@use "color" as c;
+@use "utils" as u;
+
+.searchItem {
+  border-radius: u.toRem(5);
+  gap: u.toRem(20);
+  margin-bottom: u.toRem(80);
+  width: u.toRem(600);
+}
+
+.si {
+  &__Img {
+    width: u.toRem(600);
+    height: u.toRem(450);
+    margin-bottom: u.toRem(30);
+    object-fit: cover;
+    border-radius: u.toRem(15);
+    box-shadow: u.toRem(1) u.toRem(20) u.toRem(20) rgba(0, 0, 0, 0.192);
+  }
+
+  &__Desc {
+    display: flex;
+    flex-direction: column;
+    gap: u.toRem(10);
+    flex: 2;
+  }
+
+  &__Title {
+    display: flex;
+    justify-content: flex-start;
+    font-size: u.toRem(20);
+    color: c.$secondary-color;
+  }
+
+  &__Distance {
+    font-size: u.toRem(12);
+  }
+
+  &__Subtitle {
+    font-size: u.toRem(12);
+    font-weight: bold;
+  }
+
+  &__Features {
+    font-size: u.toRem(12);
+  }
+
+  &__CancelOp {
+    font-size: u.toRem(12);
+    color: #b7b7b7;
+    font-weight: bold;
+    margin-bottom: u.toRem(10);
+    &Images {
+      height: u.toRem(15);
+    }
+  }
+
+  &__Details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__Rating {
+    display: flex;
+    justify-content: space-between;
+
+    & > span {
+      font-weight: 500;
+    }
+
+    & > button {
+      background-color: #003580;
+      color: white;
+      padding: u.toRem(5);
+      font-weight: bold;
+      border: none;
+    }
+  }
+  &__DetailTexts {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: u.toRem(5);
+  }
+
+  &__Price {
+    font-size: u.toRem(24);
+    font-weight: bolder;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__TaxOp {
+    display: flex;
+    justify-content: flex-start;
+    font-size: u.toRem(12);
+    color: gray;
+  }
+
+  &__CheckButton {
+    display: flex;
+    justify-content: flex-start;
+    background-color: c.$secondary-color;
+    color: white;
+    font-weight: bold;
+    padding: u.toRem(10) u.toRem(5);
+    border: none;
+    cursor: pointer;
+    border-radius: u.toRem(5);
+    margin-bottom: u.toRem(50);
+    transition: 0.15s background-color;
+
+    &:hover {
+      background-color: c.$button-hover-color;
+    }
+  }
+}

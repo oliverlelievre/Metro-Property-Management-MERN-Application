@@ -1,0 +1,152 @@
+@use "color" as c;
+@use "utils" as u;
+
+.property {
+  &__Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: u.toRem(20);
+  }
+
+  &__Wrapper {
+    display: flex;
+    gap: u.toRem(100);
+    position: relative;
+    margin-bottom: u.toRem(50);
+    &Details {
+      display: flex;
+      flex-direction: column;
+      width: u.toRem(500);
+
+      &Title {
+        font-size: u.toRem(32);
+      }
+
+      &Address {
+        font-size: u.toRem(18);
+        display: flex;
+        align-items: center;
+        gap: u.toRem(10);
+      }
+
+      &Price {
+        color: black;
+        font-weight: bold;
+        font-size: u.toRem(18);
+        margin-top: u.toRem(30);
+        margin-bottom: u.toRem(50);
+      }
+    }
+  }
+
+  &__Essentials {
+    margin-bottom: u.toRem(50);
+    &Images {
+      height: u.toRem(25);
+    }
+  }
+
+  &__Desc {
+    font-size: u.toRem(14);
+    line-height: 2.3;
+    margin-top: u.toRem(20);
+  }
+
+  &__List {
+    font-size: u.toRem(24);
+    margin-top: u.toRem(20);
+    margin-bottom: u.toRem(40);
+  }
+
+  &__Buttons {
+    &1 {
+      margin-right: u.toRem(50);
+      width: u.toRem(180);
+      height: u.toRem(45);
+      background-color: white;
+      border: u.toRem(1) solid c.$secondary-color;
+      border-radius: u.toRem(10);
+      transition: 0.2s background-color;
+      &:hover {
+        background-color: c.$button-hover-color;
+        color: white;
+        cursor: pointer;
+        border: u.toRem(1) solid c.$primary-color;
+      }
+    }
+
+    &2 {
+      width: u.toRem(180);
+      height: u.toRem(45);
+      background-color: white;
+      border: u.toRem(1) solid c.$secondary-color;
+      border-radius: u.toRem(10);
+      transition: 0.2s background-color;
+      &:hover {
+        background-color: c.$button-hover-color;
+        color: white;
+        cursor: pointer;
+        border: u.toRem(1) solid c.$primary-color;
+      }
+    }
+  }
+
+  &__Images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: u.toRem(45);
+    margin-left: u.toRem(300);
+  }
+
+  &__ImgWrapper {
+    padding: u.toRem(10);
+    width: u.toRem(300);
+  }
+}
+
+.Img {
+  width: u.toRem(300);
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.slider {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.613);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  &__Wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__Img {
+    width: 80%;
+    height: 80vh;
+  }
+}
+
+.close {
+  position: absolute;
+  top: u.toRem(20);
+  right: u.toRem(20);
+  font-size: u.toRem(30);
+  color: lightgray;
+  cursor: pointer;
+}
+
+.arrow {
+  margin: u.toRem(20);
+  font-size: u.toRem(50);
+  color: lightgray;
+  cursor: pointer;
+}

@@ -1,0 +1,107 @@
+@use "color" as c;
+@use "utils" as u;
+@use "media-queries" as m;
+
+.header {
+  @include m.mobile{
+    margin-left: u.toRem(20);
+    margin-right: u.toRem(20);
+  }
+  &__Icon {
+    color: lightgray;
+    padding-left: u.toRem(5);
+  }
+
+  &__Search {
+    height: u.toRem(30);
+    background-color: white;
+    border: u.toRem(3) solid c.$button-hover-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: u.toRem(10) u.toRem(0);
+    border-radius: u.toRem(15);
+    width: 100%;
+    max-width: u.toRem(1024);
+    &Item {
+      display: flex;
+      align-items: center;
+      gap: u.toRem(10);
+    }
+
+    &Input {
+      border: none;
+      outline: none;
+      @include m.mobile{
+        font-size:9px;
+      }
+    }
+
+    &Text {
+      color: lightgray;
+      cursor: pointer;
+    }
+  }
+
+  &__Btn {
+    background-color: c.$primary-color;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: u.toRem(5);
+    padding: u.toRem(10);
+    margin-right: u.toRem(5);
+    cursor: pointer;
+    transition: 0.5s background-color;
+
+    &:hover {
+      background-color: c.$button-hover-color;
+    }
+  }
+}
+
+.date {
+  z-index: 2;
+  top: u.toRem(1);
+  position: absolute;
+}
+
+.options {
+  z-index: 2;
+  top: u.toRem(255);
+  position: absolute;
+  background-color: white;
+  color: gray;
+  border-radius: u.toRem(5);
+  -webkit-box-shadow: u.toRem(0) u.toRem(0) u.toRem(10) u.toRem(-5px) rgba(0, 0, 0, 0.4);
+  box-shadow: u.toRem(0) u.toRem(0) u.toRem(10) u.toRem(-5px) rgba(0, 0, 0, 0.4);
+}
+
+.option {
+  &__Item {
+    width: u.toRem(200);
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    margin: u.toRem(10);
+  }
+
+  &__Counter {
+    display: flex;
+    align-items: center;
+    gap: u.toRem(10);
+    font-size: u.toRem(12);
+    color: c.$secondary-color;
+    &Button {
+      width: u.toRem(30);
+      height: u.toRem(30);
+      border: u.toRem(1) solid #0071c2;
+      color: #0071c2;
+      cursor: pointer;
+      background-color: white;
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}
