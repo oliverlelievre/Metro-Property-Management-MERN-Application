@@ -16,14 +16,14 @@
 <h4 align="center">Oliver Le Lievre and Chao Xin Nhin<h4>
 
   <p align="center">  
-    <a href="https://github.com/oliverlelievre/M5-LEVEL-5"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/oliverlelievre/M5-LEVEL-5">View Demo</a>
+    <a href="https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application">View Demo</a>
     ·
-    <a href="https://github.com/oliverlelievre/M5-LEVEL-5">Report Bug</a>
+    <a href="https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application">Report Bug</a>
     ·
-    <a href="https://github.com/oliverlelievre/M5-LEVEL-5">Request Feature</a>
+    <a href="https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application">Request Feature</a>
   </p>
 </div>
 
@@ -90,7 +90,7 @@ Make sure you have Node.js and MongoDB Compass installed in your computer. To ch
 1. Clone the repository
 
    ```sh
-   git clone https://github.com/oliverlelievre/M5-LEVEL-5
+   git clone https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application
    ```
 
 2. Create a .env file at the parent directory of api
@@ -205,7 +205,7 @@ Don't forget to give the project a star! Thanks again!
 Oliver Le Lievre - hello@iamollie.com
 CHAO PUT UR DETAILS HERE
 
-Project Link: [https://github.com/oliverlelievre/M5-LEVEL-5](https://github.com/oliverlelievre/M5-LEVEL-5)
+Project Link: [https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application](https://github.com/oliverlelievre/Metro-Property-Management-MERN-Application)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -232,4 +232,5 @@ We would like to acknowledge our UXD Team, Cloe Kim and Melissa Zhen, for the aw
 [Express-url]: https://www.typescriptlang.org/
 [nodejs.org]: https://img.shields.io/badge/NodeJS-20232A?style=for-the-badge&logo=node.js&logoColor=5AAB46
 [NodeJS-url]: https://nodejs.org/en
+
 # Metro-Property-Management-MERN-Application
